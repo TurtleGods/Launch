@@ -92,6 +92,7 @@
             this.Controls.Add(this.tbAdd);
             this.Controls.Add(this.listbInput);
             this.Controls.Add(this.btnRand);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.Text = "午餐";
             this.ResumeLayout(false);
