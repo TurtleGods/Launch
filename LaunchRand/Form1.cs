@@ -56,6 +56,7 @@ namespace LaunchRand
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+
             UpdateTxt(TxtMode.add);
             refresh();
             tbAdd.Clear();
@@ -88,7 +89,7 @@ namespace LaunchRand
                 {
                     if (_mode == TxtMode.add)
                     {
-                        sw.WriteLine(tbAdd.Text);
+                        sw.WriteLine(tbAdd.Text.Trim());
                     }
                     else if (_mode == TxtMode.delete)
                     {

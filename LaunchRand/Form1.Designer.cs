@@ -37,7 +37,8 @@
             // 
             // btnRand
             // 
-            this.btnRand.Location = new System.Drawing.Point(140, 259);
+            this.btnRand.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRand.Location = new System.Drawing.Point(233, 386);
             this.btnRand.Name = "btnRand";
             this.btnRand.Size = new System.Drawing.Size(70, 30);
             this.btnRand.TabIndex = 0;
@@ -47,25 +48,28 @@
             // 
             // listbInput
             // 
+            this.listbInput.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.listbInput.FormattingEnabled = true;
-            this.listbInput.ItemHeight = 12;
+            this.listbInput.ItemHeight = 19;
             this.listbInput.Location = new System.Drawing.Point(5, 64);
             this.listbInput.Name = "listbInput";
-            this.listbInput.Size = new System.Drawing.Size(207, 172);
+            this.listbInput.Size = new System.Drawing.Size(297, 289);
             this.listbInput.TabIndex = 2;
             // 
             // tbAdd
             // 
+            this.tbAdd.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tbAdd.Location = new System.Drawing.Point(12, 20);
             this.tbAdd.Name = "tbAdd";
-            this.tbAdd.Size = new System.Drawing.Size(101, 22);
+            this.tbAdd.Size = new System.Drawing.Size(150, 30);
             this.tbAdd.TabIndex = 3;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(145, 20);
+            this.btnAdd.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnAdd.Location = new System.Drawing.Point(223, 12);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(65, 22);
+            this.btnAdd.Size = new System.Drawing.Size(80, 40);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "加入";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -73,7 +77,8 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(5, 259);
+            this.btnDelete.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnDelete.Location = new System.Drawing.Point(5, 386);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(70, 30);
             this.btnDelete.TabIndex = 5;
@@ -86,7 +91,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(224, 321);
+            this.ClientSize = new System.Drawing.Size(309, 426);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.tbAdd);
@@ -94,6 +99,7 @@
             this.Controls.Add(this.btnRand);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "午餐";
             this.ResumeLayout(false);
             this.PerformLayout();
