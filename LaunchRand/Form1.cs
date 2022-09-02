@@ -8,23 +8,28 @@ namespace LaunchRand
     public partial class Form1 : Form
     {
         string path = $@"{System.Environment.CurrentDirectory}\launch.txt";
+        enum TxtMode
+        {
+            add, delete,
+        }
         public Form1()
         {
             InitializeComponent();
             creatLaunchTxt();
+            refresh();
         }
 
 
         private void btnRand_Click(object sender, System.EventArgs e)
         {
-            refresh();
+            rand();
 
         }
-        private void rand(List<string> _launchLs)
+        private void rand()
         {
             Random rand = new Random();
             int ans = rand.Next(listbInput.Items.Count);
-            MessageBox.Show(_launchLs[ans].ToString());
+            MessageBox.Show(listbInput.Items[ans].ToString());
         }
         private void creatLaunchTxt()
         {
@@ -51,27 +56,54 @@ namespace LaunchRand
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string add = tbAdd.Text;
+            UpdateTxt(TxtMode.add);
+            refresh();
+            tbAdd.Clear();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            listbInput.Items.Remove(listbInput.SelectedItem);
+            UpdateTxt(TxtMode.delete);
+        }
+        private void UpdateTxt(TxtMode _mode)
+        {
             try
             {
-                FileStream fsFile = new FileStream(path, FileMode.Append);
+                FileStream fsFile = null;
+
+                switch (_mode)
+                {
+                    case TxtMode.add:
+
+                        fsFile = new FileStream(path, FileMode.Append);
+                        break;
+                    case TxtMode.delete:
+                        fsFile = new FileStream(path, FileMode.Create);
+                        break;
+                    default:
+                        break;
+                }
                 using (StreamWriter sw = new StreamWriter(fsFile))
                 {
-                    sw.WriteLine(add);
+                    if (_mode == TxtMode.add)
+                    {
+                        sw.WriteLine(tbAdd.Text);
+                    }
+                    else if (_mode == TxtMode.delete)
+                    {
+                        foreach (var _line in listbInput.Items)
+                        {
+                            sw.WriteLine(_line);
+                        }
+                    }
                     sw.Close();
                 }
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            int select = listbInput.SelectedIndex;
-
         }
     }
 }

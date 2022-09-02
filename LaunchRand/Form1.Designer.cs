@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnRand = new System.Windows.Forms.Button();
-            this.listBox = new System.Windows.Forms.ListBox();
             this.listbInput = new System.Windows.Forms.ListBox();
             this.tbAdd = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -38,42 +37,33 @@
             // 
             // btnRand
             // 
-            this.btnRand.Location = new System.Drawing.Point(584, 357);
+            this.btnRand.Location = new System.Drawing.Point(140, 259);
             this.btnRand.Name = "btnRand";
-            this.btnRand.Size = new System.Drawing.Size(99, 33);
+            this.btnRand.Size = new System.Drawing.Size(70, 30);
             this.btnRand.TabIndex = 0;
             this.btnRand.Text = "Rand";
             this.btnRand.UseVisualStyleBackColor = true;
             this.btnRand.Click += new System.EventHandler(this.btnRand_Click);
             // 
-            // listBox
-            // 
-            this.listBox.FormattingEnabled = true;
-            this.listBox.ItemHeight = 12;
-            this.listBox.Location = new System.Drawing.Point(453, 164);
-            this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(230, 172);
-            this.listBox.TabIndex = 1;
-            // 
-            // listBox1
+            // listbInput
             // 
             this.listbInput.FormattingEnabled = true;
             this.listbInput.ItemHeight = 12;
-            this.listbInput.Location = new System.Drawing.Point(153, 164);
-            this.listbInput.Name = "listBox1";
+            this.listbInput.Location = new System.Drawing.Point(5, 64);
+            this.listbInput.Name = "listbInput";
             this.listbInput.Size = new System.Drawing.Size(207, 172);
             this.listbInput.TabIndex = 2;
             // 
             // tbAdd
             // 
-            this.tbAdd.Location = new System.Drawing.Point(259, 121);
+            this.tbAdd.Location = new System.Drawing.Point(12, 20);
             this.tbAdd.Name = "tbAdd";
             this.tbAdd.Size = new System.Drawing.Size(101, 22);
             this.tbAdd.TabIndex = 3;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(388, 120);
+            this.btnAdd.Location = new System.Drawing.Point(145, 20);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(65, 22);
             this.btnAdd.TabIndex = 4;
@@ -83,9 +73,9 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(292, 359);
+            this.btnDelete.Location = new System.Drawing.Point(5, 259);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(68, 31);
+            this.btnDelete.Size = new System.Drawing.Size(70, 30);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "刪除";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -96,12 +86,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(224, 321);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.tbAdd);
             this.Controls.Add(this.listbInput);
-            this.Controls.Add(this.listBox);
             this.Controls.Add(this.btnRand);
             this.Name = "Form1";
             this.Text = "午餐";
@@ -113,7 +102,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnRand;
-        private System.Windows.Forms.ListBox listBox;
         private System.Windows.Forms.ListBox listbInput;
         private System.Windows.Forms.TextBox tbAdd;
         private System.Windows.Forms.Button btnAdd;
