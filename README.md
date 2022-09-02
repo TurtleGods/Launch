@@ -1,2 +1,2 @@
 # Launch
-U
+Use launch.txt to control launch items.
