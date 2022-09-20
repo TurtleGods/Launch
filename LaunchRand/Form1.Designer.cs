@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnRand = new System.Windows.Forms.Button();
             this.listbInput = new System.Windows.Forms.ListBox();
             this.tbAdd = new System.Windows.Forms.TextBox();
@@ -98,6 +99,8 @@
             this.Controls.Add(this.listbInput);
             this.Controls.Add(this.btnRand);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "午餐";
